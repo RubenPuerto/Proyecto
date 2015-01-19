@@ -1,0 +1,230 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Pagina web</title>
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link rel="stylesheet"  href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+		
+		<style type="text/css">
+			/*escritorio*/
+			@media(min-width: 1200px){
+				body{ color: #7F0900;}
+			}
+			/*escritorio pequeño o tablet*/
+			@media(min-width: 768px) and (max-width: 979px){
+				body{color: green;}
+			}
+			/*tablet o smarphone modo horizontal*/
+			@media(max-width: 767px){
+				body{color: blue;}
+			}
+			/*smartphone*/
+			@media(max-width: 480px){
+				body{color: yellow;}	
+			}
+		</style>
+		<script  src="js/jquery-1.9.1.min.js"></script>
+		<script  src="js/bootstrap.min.js"></script>
+		<script>
+		$().ready(function(){
+
+			$("#myslide").carousel({
+				interval:1000,
+				pause: "hover",
+
+			});
+		
+		});
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="row-fluid">
+				
+				<div class="navbar navbar-inverse" >
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav pull-rigth">
+								<li class="active">
+									<a href="#">home</a>
+								</li>
+								<li><a href="#">contact</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">About</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span2">&nbsp;</div>
+				<div class="span8">
+					<div id="myslide" class="carousel slide">
+
+						<ol class="carousel-indicators">
+							<li data-target="#myslide" data-slide-to="1" class="active"></li>
+							<li data-target="#myslide" data-slide-to="2"></li>
+							<li data-target="#myslide" data-slide-to="3"></li>
+							
+						</ol>
+
+
+
+						<div class="carousel-inner">
+							<div class="item  active">
+								<img src="img/01.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>pruebas</h4>
+								<p>pruebas pruebas pruebas pruebas</p>
+							</div>
+							</div>
+							<div class="item ">
+								<img src="img/02.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>pruebas</h4>
+								<p>pruebas pruebas pruebas pruebas</p>
+							</div>
+							</div>
+							<div class="item ">
+								<img src="img/03.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>pruebas</h4>
+								<p>pruebas pruebas pruebas pruebas</p>
+							</div>
+							</div>
+						</div>
+						<a href="#myslide" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+						<a href="#myslide" data-slide="next" class="carousel-control right">&rsaquo;</a>
+					</div>
+				</div>
+				<div class="span2">&nbsp;</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="page-header">
+						<h1>listas</h1>
+					</div>
+				</div>
+			</div>
+
+<div class="row-fluid">
+	<div class="span4">
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">test 1</a></li>
+			<li><a href="#">test 2</a></li>
+			<li><a href="#">test 3</a></li>
+			<li class="disabled"><a href="#">test 4</a></li>
+		</ul>
+
+	</div>
+	<div class="span4"></div>
+	<div class="span4"></div>
+</div>
+
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="well hidden-desktop">
+						<h1 class="text-center">escritorio</h1>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="well hidden-tablet">
+						<h1 class="text-center">tablet</h1>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="well hidden-phone">
+						<h1 class="text-center">Phone</h1>
+					</div>
+				</div>
+			</div>	
+
+
+
+
+		<div class="row">
+			<div class="span12">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p>	
+			</div>	
+		</div>	
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="row-fluid">
+					<div class="span6">
+						<hgroup>
+							<h1>Pagina de pruebas</h1>
+						</hgroup>
+						<p>
+							Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+						</p>	
+					</div>	
+					<div class="span6">
+						<hgroup>
+							<h1>Pagina de pruebas</h1>
+						</hgroup>
+						<p>
+							Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+						</p>	
+					</div>
+				</div>	
+			</div>
+			<div class="span6">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p>	
+			</div>		
+		</div>
+		<div class="row">
+			<div class="span3">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p>
+
+			</div>	
+			<div class="span3">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p>
+			</div>	
+			<div class="span3">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p> 
+			</div>	
+			<div class="span3">
+				<hgroup>
+					<h1>Pagina de pruebas</h1>
+				</hgroup>
+				<p>
+					Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+				</p>
+		</div>	
+		</div>
+		
+	</body>
+</html>
