@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
 
   <body>
 
-  <nav class="navbar navbar-inverse ">
+  <nav class="navbar navbar-inverse navbar-fixed-top ">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,8 +26,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">Cursos</a></li>
+            <li class="active"><a href="banner.html">Inicio</a></li>
+            <li><a href="footer.html">Cursos</a></li>
             <li><a href="#">Programas</a></li>
           </ul>
          </div>
@@ -35,8 +36,7 @@
 
 
 <div class="container">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
+
  <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -50,7 +50,7 @@
           <img src="img/01.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-             
+             <p>Pruebas de texto en el banner</p>
              
             </div>
           </div>
@@ -84,8 +84,48 @@
       </a>
     </div>
 </div>
-     <div class="col-md-1"></div>
-</div>
+
+     <footer>
+      <div class="container">
+        <div class="col-md-4 col-sm-4 MapaSite">
+          <p>Nuestros Cursos</p>
+          <ul class="MapaSite">
+            <li>Inicio</li>
+            <li>Cursos</li>
+            <li>Calendarios</li>
+            <li>Pruebas</li>
+            <li>Contactenos</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 buttonCurso">
+          <h4>¿No Encuentras el Curso?</h4>
+          <button>Perdir un Curso</button>
+        </div>
+        <div class="col-md-4 col-sm-4 ListRedSocial">
+          <h4>Encuentranos en</h4>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img\facebook.png" alt="">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img\twitter.png" alt="">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img\google.png" alt="">
+                Google+
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </footer>
 
 
   </body>

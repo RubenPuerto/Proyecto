@@ -1,11 +1,25 @@
 
 footer{
+	padding-top: 3%;
+	border-top-style: solid;
+	border-width: 1px;
 
-	background-color: #1d365d;
-	color:#fff;
 }
 
 #ListRedSocial{
 	background-color: #fff !important;
 
+}
+
+footer ul li img {
+width: 40px;
+height: 40px;
+
+margin: 2%;
+}
+
+footer ul li {
+    list-style-type: none;
+list
+	
 }
