@@ -1,0 +1,777 @@
+.separador{
+    margin-top: 30px;
+}
+.recibo{
+    height:300px;
+    background-color: rgb(247, 247, 247);
+    margin-top:40px;
+		box-shadow: 1px 1px 10px 10px #D1C8B7;
+}
+
+.recibo .reciboImg{
+	padding: 10px 2% 0% 2%;
+	width: 15%;
+	float: left;
+	//border-style: solid;
+	
+}
+
+.recibo .reciboImg img{
+	width:100px;
+}
+.TitleRecibo{
+	//border-style: solid;
+	//margin-left:10px;
+	width: 85%;
+	float: right;
+	padding-top: 20px;
+}
+.TitleRecibo h4{
+	font-size: 30px;
+	text-align: center;
+	
+}
+.codigoBarras{
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+}
+
+
+ 
+
+.background{
+background-size: inherit;
+background-repeat: repeat;
+}
+div.imgCurso{
+	margin-left: 10%;
+        margin-right: 10%;
+}
+.SelectCourse{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+}
+.SelectCourse select{
+	width: 300px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.imgCurso{
+	margin: 0 auto;
+}
+
+div.DetalleTema p{
+	text-align: justify;
+        margin-left: 20px;
+}
+
+.TitleDetalle{
+	text-align: center;
+}
+
+.ContentMail{
+	//background-color:red;
+	margin-top:20px;
+}
+.ContentMail .TitleCorreo{
+	text-align: center;
+	padding-top:20px;
+}
+.ContentMail form{
+	width: 350px;
+}
+.ContentMail .correo{
+	padding-top:20px;
+	padding-left:5%;
+}
+section {
+  margin-top: 30px;
+}
+
+
+.hero {
+	position: relative;
+	height: 480px;
+	background: #0164ad;
+}
+@media (max-width: 767px) {
+.hero {
+    height: 200px;
+}
+h1
+{
+    font-size: 25px;
+}
+.vote h1 {
+	color: #fff;
+	text-shadow: 0 0 50px rgba(0,0,0,0.75);
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 0.10em;
+	font-family: 'AvenirNextLTW01-Medium', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+ }
+} 
+
+
+@media (min-width: 768px)  {
+	.vote h1 {
+	color: #FFF;
+	text-shadow: 0 0 50px rgba(0,0,0,0.75);
+	margin: 0 0 5px 0;
+	padding: 175px 0 0 0;
+	text-align: center;
+	font-size: 36px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.20em;
+	font-family: 'AvenirNextLTW01-Medium', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+ }
+	
+} 
+
+	
+ 
+	.hero .vote {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		margin: 0 auto
+	 }
+ 
+	.hero.locked .background>div {
+		background: rgba(3,101,180,0.85);
+		width: 100%;
+		height: 512px !important
+	 }
+ 
+	.hero.locked .content h1 {padding-top: 100px}
+ 
+	.hero.locked .content p {width: 100%}
+ 
+		.hero.locked .content p input[type=text] {
+			text-align: center;
+			background: #fff;
+			border: 1px solid #7290a9;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			padding: 12px;
+			box-shadow: 0 -1px 0 #083a63;
+			color: #404040;
+			font-weight: bold;
+			font-size: 14px;
+			font-family: 'Avenir LT W01 85 Heavy';
+			-webkit-font-smoothing: antialised;
+			margin-bottom: 12px
+		 }
+ 
+		.hero.locked .content p .button {width: 175px}
+ 
+	.hero .content .shaded {background: rgba(0,0,0,0.5)}
+ 
+	.hero .content .left {float: left;width:50%}
+ 
+	.hero .content .right {float: right;width:50%}
+ 
+	.hero .content .price-level {margin: 0 0 10px 0}
+ 
+		.hero .content .price-level .button {
+			width: 175px;
+			float: left;
+			font-family: 'Avenir Next LT W01 Demi', Helvetica, Arial, sans-serif;
+			-webkit-font-smoothing: antialiased
+		 }
+ 
+		.hero .content .price-level p {
+			float: right;
+			width: 250px;
+			font-size: 14px;
+			line-height: 20px;
+			font-family: 'Avenir Next LT W01 Demi', Helvetica, Arial, sans-serif;
+			-webkit-font-smoothing: antialiased;
+			color: #fff;
+			margin: 0;
+			height: 55px;
+			line-height: 55px
+		 }
+ 
+			.hero .content .price-level p span {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 1.33em
+			 }
+ 
+	.hero .play-btn {
+		background: url("http://instaboda.es/img/Media-Play-128.png") !important;
+		border: none;
+		height: 80px;
+		width: 80px;
+		cursor: pointer
+	 }
+ 
+	.hero .background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: top center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		overflow: hidden
+	 }
+ 
+		.hero .background .video {height: 100%}
+ 
+			.hero .background .video #video-cont {
+				width: 100% !important;
+				height: 160% !important;
+				margin-top: -16%;}
+ 
+	.hero.has-background-video .background {background-position: center center;background-repeat:no-repeat}
+ 
+	.hero.has-background-image .background:before {
+		content: '';
+		height: 100%;
+		width: 100%;
+		background: rgba(3,101,180,0.3);
+		top: 0;
+		left: 0;
+		position: absolute
+	 }
+ 
+.play-btn {
+	margin: 18px auto;
+	width: 136px;
+	padding: 10px 16px;
+	z-index: 9999
+ }
+ 
+.hero-vote {
+    text-align: center;
+
+    /* top: 19px; */
+
+
+}
+ 
+.funded .price-level {opacity: .5}
+ 
+.funded .progress .bar .span {border-radius: 10px}
+ 
+
+ 
+	.vote h1 span {
+		font-family: 'AvenirNextLTW01-Regular', Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		display: block;
+		font-size: 24px
+	 }
+ 
+.vote .button {
+	width: 135px;
+	margin: 0 auto;
+	padding: 10px 17px
+ }
+ 
+.vote .voted .left {width: 45%;float:left}
+ 
+	.vote .voted .left p {
+		font-size: 18px;
+		margin: 0;
+		color: #fff
+	 }
+ 
+	.vote .voted .left .bar {margin-top: 10px;margin-right:30px}
+ 
+.vote .voted .right {
+	width: 40%;
+	float: right;
+	margin-top: -50px
+ }
+ 
+	.vote .voted .right p {
+		float: right;
+		clear: both;
+		color: #fff;
+		opacity: .5;
+		padding: 5px 0 5px 35px;
+		background: url("/assets/ico-confirm-fa804b9df544722efe096fbc9ece6ab0.png") no-repeat left center
+	 }
+ 
+	.vote .voted .right h2 {
+		text-shadow: 0 0 50px rgba(0,0,0,0.75);
+		float: right;
+		clear: both;
+		color: #fff;
+		font-size: 70px;
+		line-height: 50px;
+		text-align: right
+	 }
+ 
+		.vote .voted .right h2 span {display: block;font-size:35px}
+ 
+.buy-tickets {
+	font-size: 18px;
+	color: #fff;
+	display: block;
+	margin: -30px 0 20px 0;
+	font-family: 'Avenir Next LT W01 Bold', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+ }
+ 
+.share {background: #404040}
+ 
+	.share .wrapper {width: 800px;margin:0 auto}
+ 
+	.share p {
+		float: left;
+		margin: 0 14px 0 0;
+		padding: 10px 0;
+		color: rgba(255,255,255,0.5);
+		letter-spacing: 0.1em;
+		-webkit-font-smoothing: antialiased
+	 }
+ 
+	.share a {
+		display: block;
+		float: left;
+		margin: 0 14px;
+		color: rgba(255,255,255,0.7);
+		font: bold 13px;
+		padding: 12px 0 12px 30px
+	 }
+ 
+		.share a:hover {color: #ffffff}
+ 
+		.share a.tweet {background: url("/assets/ico-tweet-2648efef1146e1dff8a6751e392be9ee.png") no-repeat left center}
+ 
+		.share a.like {background: url("/assets/ico-like2-82bcfc38dc5f39b49c7fac6317251628.png") no-repeat left center}
+ 
+		.share a.email {background: url("/assets/ico-email-82333b0127ba3af6bc036cba1255bbbb.png") no-repeat left center}
+ 
+.body {width: 960px;margin:0 auto 30px auto}
+ 
+	.body .left {float: left;width:45%}
+ 
+	.body .right {float: right;width:45%}
+ 
+#request-modal,#email-modal {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url("/assets/bg-mask-5985f1abc4949ccced36955ecb976788.png")
+ }
+ 
+#request-modal .close,#email-modal .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0
+ }
+ 
+#request-modal form,#email-modal form {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	width: 940px;
+	height: 390px;
+	margin: -165px 0 0 -470px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #17609d
+ }
+ 
+#email-modal form {height: 430px}
+ 
+#request-modal form fieldset,#email-modal form fieldset {
+	border: none;
+	margin: 0;
+	padding: 0 0 0 200px
+ }
+ 
+#request-modal form fieldset div,#email-modal form fieldset div {margin: 0 0 1em}
+ 
+#request-modal form h1,#email-modal form h1 {
+	margin: 30px 0 10px 0;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff
+ }
+ 
+#request-modal form label,#email-modal form label {
+	color: #fff;
+	font-size: 16px;
+	display: inline-block;
+	text-align: left
+ }
+ 
+#request-modal form label.label-condensed {font-size: 14px}
+ 
+	#request-modal form label.label-condensed em {
+		font-style: normal;
+		color: #3584C3;
+		margin: 0 0.5em 0 0;
+		font-size: 1.25em
+	 }
+ 
+#request-modal form input[type="text"],#email-modal form input[type="text"] {
+	background: #fff;
+	border: 1px solid #7290a9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 12px;
+	box-shadow: 0 -1px 0 #083a63;
+	color: #404040;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Avenir LT W01 85 Heavy';
+	-webkit-font-smoothing: antialised
+ }
+ 
+#email-modal form textarea {
+	background: #fff;
+	border: 1px solid #7290a9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 12px;
+	box-shadow: 0 -1px 0 #083a63;
+	color: #404040;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Avenir LT W01 85 Heavy';
+	-webkit-font-smoothing: antialised
+ }
+ 
+#email-modal form span.lighter {color: #7AB9EC}
+ 
+#request-modal form .field-half-width {width: 250px;margin:0 40px 0 0}
+ 
+#request-modal form .city {width: 150px}
+ 
+#request-modal form .amount {width: 50px}
+ 
+#request-modal form h4,#email-modal form h4 {display: inline-block;color:#73b1e5}
+ 
+#request-modal form p,#email-modal form p {color: #fff;margin:10px 0}
+ 
+#request-modal form p.align-center {text-align: center}
+ 
+#request-modal form .button {
+	width: 100px;
+	text-align: center;
+	margin-left: 200px
+ }
+ 
+#twitter-feed {
+	min-height: 594px;
+	width: 50%;
+	background: #2a2a2a url("/assets/bg-twitter-feed-0f74e53531f4fa887a2e091a586fd9e4.jpg") no-repeat center bottom
+ }
+ 
+	#twitter-feed ul {
+		margin: 30px 20px;
+		padding: 0;
+		list-style: none
+	 }
+ 
+	#twitter-feed li {margin: 30px}
+ 
+		#twitter-feed li div {background: #4db3e1 url("/assets/bg-twitter-feed-1-ee726071bac3af7b250a39131db74f3a.jpg") bottom;overflow:hidden}
+ 
+			#twitter-feed li div img {float: right}
+ 
+			#twitter-feed li div p {
+				float: left;
+				margin: 0;
+				color: #fff;
+				width: 252px;
+				padding: 10px;
+				font-size: 18px
+			 }
+ 
+		#twitter-feed li p.handle {text-align: right;color:#d0d0d0}
+ 
+			#twitter-feed li p.handle a {color: #8ea4c0}
+ 
+		#twitter-feed li:nth-child(even) div {background-image: url("/assets/bg-twitter-feed-2-e167aff475a603c2814647c6db7aaa2f.jpg")}
+ 
+			#twitter-feed li:nth-child(even) div img {float: left}
+ 
+			#twitter-feed li:nth-child(even) div p {float: right}
+ 
+		#twitter-feed li:nth-child(even) p.handle {text-align: left}
+ 
+		#twitter-feed li:nth-child(3n+3) div {background-image: url("/assets/bg-twitter-feed-3-d08213f14d646a2dc51542c109f0dfcd.jpg")}
+ 
+.ticket {
+	position: relative;
+	width: 960px;
+	min-height: 193px;
+	margin: 0 auto 65px auto;
+	background: #cecece url("/assets/bg-ticket-cd3d2e0c1f0ee203f62c89a7bc3396c4.png");
+	box-shadow: -6px 6px #aaaaaa, -12px 12px 0 #7b7b7b;
+	padding: 0 0 20px 0;
+	font-family: 'Avenir Next LT W01 Bold', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+ }
+ 
+	.ticket .logo {
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		width: 86px;
+		height: 170px;
+		margin-top: -85px;
+		background: url("/assets/bg-ticket-logo-b9685a6e989b7ff5c04d1e89a3fb6590.png") no-repeat
+	 }
+ 
+	.ticket .barcode {
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		width: 107px;
+		height: 160px;
+		margin-top: -80px;
+		background: url("/assets/bg-ticket-barcode-83d1003230577947037dd0c9fda0c094.png") no-repeat
+	 }
+ 
+	.ticket .content {margin: 0 170px 0 135px}
+ 
+		.ticket .content .left {float: left;width:45%}
+ 
+		.ticket .content .right {float: right;width:55%}
+ 
+	.ticket h1 {
+		text-transform: uppercase;
+		color: #333;
+		margin: 0
+	 }
+ 
+	.ticket h2 {
+		color: #898989;
+		line-height: 24px;
+		font-size: 22px;
+		text-transform: uppercase
+	 }
+ 
+	.ticket h3 {color: #3c3c3c;text-transform:uppercase}
+ 
+	.ticket h6 {margin: 30px 0 15px 0}
+ 
+	.ticket .right h2 {margin: 30px 0 0 0;color:#000}
+ 
+	.ticket p {
+		font-size: 18px;
+		line-height: 24px;
+		color: #5b5b5b;
+		margin: 10px 0;
+		text-transform: uppercase
+	 }
+ 
+	.ticket .bar {background: #fff;padding:5px 10px}
+ 
+		.ticket .bar h3 {
+			float: left;
+			margin: 0 40px 0 0;
+			font-size: 16px;
+			color: #adadad;
+			text-transform: uppercase;
+			letter-spacing: 1px
+		 }
+ 
+			.ticket .bar h3:last-child {margin: 0}
+ 
+.tooltip-toggle {position: relative}
+ 
+.tool-popup {
+	position: absolute;
+	width: 200px;
+	bottom: 30px;
+	background: #919191;
+	padding: 15px;
+	left: -15px
+ }
+ 
+	.tool-popup p {margin: 0}
+ 
+	.tool-popup:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid #919191;
+		position: absolute;
+		top: 100%
+	 }
+ 
+	.tool-popup a {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		color: #FFF !important;
+		padding: 1px 0;
+		box-sizing: border-box;
+		background: #2897F0;
+		border-radius: 100%;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		-webkit-transition: background-color, 0.3s;
+		-moz-transition: background-color, 0.3s;
+		-o-transition: background-color, 0.3s;
+		transition: background-color, 0.3s
+	 }
+ 
+		.tool-popup a:hover {background-color: #118bee}
+ 
+.faces {
+	margin: 0 0 60px 0;
+	width: 100%;
+	overflow: hidden
+ }
+ 
+	.faces h2 {
+		text-align: center;
+		color: #555;
+		text-transform: uppercase;
+		margin: 55px 0 23px 0;
+		line-height: 24px
+	 }
+ 
+		.faces h2 a {
+			text-decoration: underline;
+			color: #00aeef;
+			font-size: 16px;
+			margin: 0 0 0 40px
+		 }
+ 
+	.faces .attendees {
+		margin: 0;
+		padding: 0;
+		list-style: none
+	 }
+ 
+		.faces .attendees li {
+			float: left;
+			width: 5%;
+			min-width: 50px
+		 }
+ 
+		.faces .attendees img {
+			display: block;
+			width: 100%;
+			position: relative
+		 }
+ 
+
+ 
+
+ 
+	
+.clearfix {*zoom: 1}
+ 
+	.clearfix:before {display: table;content:""}
+ 
+	.clearfix:after {
+		display: table;
+		content: "";
+		clear: both
+	 }
+ 
+.hidden {display: none}
+ 
+.transparent {opacity: 0}
+ 
+.text-right {text-align: right}
+ 
+.text-center {text-align: center}
+ 
+.is-hidden {display: none}
+ 
+.errored-field {border: 1px solid red !important}
+ 
+.logged p {
+	position: relative;
+	top: 15px;
+	font-size: 0.9em;
+	line-height: 1.33
+ }
+ 
+.content-container {width: 600px;margin:2em auto}
+ 
+.contact-form {width: 600px;margin:50px auto}
+ 
+	.contact-form table td {vertical-align: top;padding:0.5em}
+ 
+.flash {
+	color: white;
+	margin: 1em 0;
+	padding: 0.33em
+ }
+ 
+	.flash.flash-notice {background: #75C233}
+ 
+.about-voting {background: #ffdd04;padding:2em 0}
+ 
+	.about-voting a.inactive {opacity: 0.5}
+ 
+	.about-voting div {width: 700px;margin:0px auto}
+ 
+	.about-voting p {margin: 0px;font-size:1.1em}
+ 
+		.about-voting p.float-left {float: left}
+ 
+		.about-voting p.float-right {float: right}
+ 
+	.about-voting a {
+		background: #c94141;
+		color: white;
+		border: none;
+		font-weight: bold;
+		display: block;
+		text-align: center;
+		padding: 0.5em 1.5em;
+		text-transform: uppercase;
+		position: relative;
+		top: -6px;
+		-webkit-transition: background 0.3s;
+		-moz-transition: background 0.3s;
+		-o-transition: background 0.3s;
+		transition: background 0.3s
+	 }
+ 
+		.about-voting a:hover {background-color: #DB6155}
+ 
+video {margin: 0 60px 2em 60px}
+ 
+h1.long-title {
+	color: #fff;
+	padding: 1em 0;
+	font-size: 42px;
+	margin: 0;
+	text-transform: uppercase
+ }
+ 
+	h1.long-title span {
+		display: block;
+		font-weight: 100;
+		font-size: 32px
+	 }

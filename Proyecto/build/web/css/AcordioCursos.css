@@ -1,0 +1,71 @@
+/*Basic reset*/
+* {margin: 0; padding: 0;}
+
+
+#accordian {
+	background: #eeeeee;
+	width: 100%;
+	margin: 100px auto 0 auto;
+	color: #777777;
+	overflow: hidden;
+	/*Some cool shadow and glow effect*/
+}
+/*heading styles*/
+#accordian h3 {
+    color: #007ECC;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 34px;
+    padding: 5px 10px 0px;
+    cursor: pointer;
+    border-bottom: 2px dotted #7CF;
+    height: 35px;
+	/*fallback for browsers not supporting gradients*/
+	/*background: #0168B3;*/
+	/*background: linear-gradient(#003040, #002535);*/
+}
+/*heading hover effect*/
+/*#accordian h3:hover {
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+/*iconfont styles*/
+#accordian h3 div {
+	height: 31px;
+	width: 31px;
+	margin-right: 10px;
+	float: left;
+	background-image:url(img-ni%C3%B1os/BulletQuestions.png);
+}
+/*list items*/
+#accordian li {
+	list-style-type: none;
+}
+#accordian ul ul li p {
+	width: 95%;
+	margin: 1% auto;
+	text-align: justify;
+	font-size: 0.9em;
+}
+/*links*/
+/*#accordian ul ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 27px;
+	display: block;
+	padding: 0 15px;*/
+	/*transition for smooth hover animation
+	transition: all 0.15s;
+}*/
+/*hover effect on links*/
+/*#accordian ul ul li a:hover {
+	background: #003545;
+	border-left: 5px solid lightgreen;
+}*/
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+	display: none;
+}
+#accordian li.active ul {
+	display: block;
+}
