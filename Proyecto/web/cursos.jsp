@@ -111,8 +111,8 @@ $(document).ready(function(){
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-					<li class="active"><a href="Home.jsp">Home</a></li>
-					<li><a href="cursos.jsp">Cursos</a></li>
+					<li ><a href="Home.jsp">Home</a></li>
+					<li class="active"><a href="cursos.jsp">Cursos</a></li>
                                         <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">formulario</a></li>	
 					
 				  </ul>
