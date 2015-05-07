@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import com.proyecto.conexion.Conexion;
+import java.sql.ResultSet;
 
 public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -42,102 +43,97 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/Formulario.css\" />\n");
-      out.write("     <link rel=\"stylesheet\" href=\"http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css\" />\n");
-      out.write("    <script src=\"http://code.jquery.com/jquery-1.8.2.js\"></script>\n");
-      out.write("    <script src=\"/resources/demos/external/jquery.bgiframe-2.1.2.js\"></script>\n");
-      out.write("    <script src=\"http://code.jquery.com/ui/1.9.1/jquery-ui.js\"></script>\n");
-      out.write("           <script>\n");
-      out.write("    function abrir_dialog() {\n");
-      out.write("      $( \"#dialog\" ).dialog({\n");
-      out.write("          show: \"blind\",\n");
-      out.write("          hide: \"explode\"\n");
-      out.write("      });\n");
-      out.write("    };\n");
-      out.write("    </script>\n");
-      out.write("        <title>Pedir Un Curso</title>\n");
-      out.write("    </head>\n");
-      out.write("    <style>\n");
-      out.write("    .fancybox-inner {\n");
-      out.write("height: 265px !important;\n");
-      out.write("}\n");
-      out.write("        \n");
-      out.write("    </style>\n");
-      out.write("        \n");
-      out.write("    <body>\n");
-      out.write("        <h1>Pedir Un Curso</h1>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/Formulario.css\" />\r\n");
+      out.write("     <link rel=\"stylesheet\" href=\"http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css\" />\r\n");
+      out.write("    <script src=\"http://code.jquery.com/jquery-1.8.2.js\"></script>\r\n");
+      out.write("    <script src=\"/resources/demos/external/jquery.bgiframe-2.1.2.js\"></script>\r\n");
+      out.write("    <script src=\"http://code.jquery.com/ui/1.9.1/jquery-ui.js\"></script>\r\n");
+      out.write("    <script>\r\n");
+      out.write("    function abrir_dialog() {\r\n");
+      out.write("      $( \"#dialog\" ).dialog({\r\n");
+      out.write("          show: \"blind\",\r\n");
+      out.write("          hide: \"explode\"\r\n");
+      out.write("           \r\n");
+      out.write("      });\r\n");
+      out.write("     window.location.replace(\"http://www.google.com\");\r\n");
+      out.write("    };\r\n");
+      out.write("    </script>\r\n");
+      out.write("        <title>Pedir Un Curso</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <style>\r\n");
+      out.write("    .fancybox-inner {\r\n");
+      out.write("height: 265px !important;\r\n");
+      out.write("}\r\n");
+      out.write("        \r\n");
+      out.write("    </style>\r\n");
+      out.write("        \r\n");
+      out.write("    <body>\r\n");
+      out.write("        <h1>Pedir Un Curso</h1>\r\n");
       out.write("      ");
 
     Conexion c=new Conexion();
     String nombre = request.getParameter("Nombre"); 
-    String valor= request.getParameter("valor"); 
+   
     String correo = request.getParameter("correo"); 
-    String jornada = request.getParameter("jornada"); 
-    String curso= request.getParameter("curso"); 
-    String sede = request.getParameter("sede"); 
+ 
+    String celular= request.getParameter("celular"); 
+  
     
     
-    if (nombre!= null && valor!=null && correo!=null && jornada !=null && curso!=null && sede!=null) {
+    if (nombre!= null  && correo!=null  && celular!=null) {
             
-        
-    String qry="insert into cursonuevos(Nombre,Valor_Pagado,correo,jornada,Nombre_Curso,sede)values('"+nombre+"','"+valor+"','"+correo+"','"+jornada+"','"+curso+"','"+sede+"');";
-    c.sql.executeUpdate(qry);
-    out.print("");
+    ResultSet rs=c.PedirCursos(nombre, correo, celular);
+   
     }
         
-      out.write("\n");
-      out.write("<FORM name=\"insert\" METHOD=post action=\"NuevoCurso.jsp\">\n");
-      out.write("<table>\n");
-      out.write("<tr>\n");
-      out.write("<td>Nombre</td>\n");
-      out.write("<td>Valor Que Pagaria</td>\n");
-      out.write("</tr>\n");
-      out.write("<tr>\n");
-      out.write("<td><input type=\"text\" name=\"Nombre\"><br></td>\n");
-      out.write("<td><input type=\"text\" name=\"valor\" placeholder=\"Valor Numerico\" required <br></td>\n");
-      out.write("</tr>\n");
-      out.write("<td>Correo</td>\n");
-      out.write("<td>Jornada De Estudio</td>\n");
-      out.write("</tr>\n");
-      out.write("<tr>\n");
-      out.write("<td><input type=\"text\" name=\"correo\"placeholder=\"ejemplo@hotmail.com\"><br></td>\n");
-      out.write("<td><input type=\"text\" name=\"jornada\"><br></td>\n");
-      out.write("</tr>\n");
-      out.write("<td>Nombre Curso</td>\n");
-      out.write("<td>Sede Para El Curso</td>\n");
-      out.write("</tr>\n");
-      out.write("<tr>\n");
-      out.write("<td><input type=\"text\" name=\"curso\"><br></td>\n");
-      out.write("<td>\n");
-      out.write("   <select name=\"sede\">\n");
-      out.write("   <option value=\"tagaste\">Tagaste</option> \n");
-      out.write("   <option value=\"suba\">Suba</option> \n");
-      out.write("</select>\n");
-      out.write("</td>\n");
-      out.write("</tr>\n");
-      out.write("</table>\n");
-      out.write("    <div class=\"boton\">\n");
-      out.write("        <INPUT class=\"submit\" TYPE=\"submit\" VALUE=\"Guardar\" onclick=\"abrir_dialog()\">\n");
-      out.write("        \n");
-      out.write("    </div>\n");
-      out.write("    \n");
-      out.write("      <div id=\"dialog\" title=\"\" style=\"display:none;\">\n");
-      out.write("    <p>Curso Guardado</p>\n");
-      out.write(" \n");
-      out.write("</div>\n");
-      out.write("    \n");
-      out.write("</form>\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("<FORM name=\"insert\" METHOD=post action=\"NuevoCurso.jsp\">\r\n");
+      out.write("<table>\r\n");
+      out.write("<tr>\r\n");
+      out.write("<td>Nombre Completo</td>\r\n");
+      out.write(" \r\n");
+      out.write("</tr>\r\n");
+      out.write("<tr>\r\n");
+      out.write("<td><input type=\"text\" name=\"Nombre\"><br></td>\r\n");
+      out.write("\r\n");
+      out.write("</tr>\r\n");
+      out.write("<td>Correo</td>\r\n");
+      out.write("</tr>\r\n");
+      out.write("<tr>\r\n");
+      out.write("<td><input type=\"text\" name=\"correo\"placeholder=\"ejemplo@hotmail.com\"><br></td>\r\n");
+      out.write("</tr>\r\n");
+      out.write("<td>Celular</td>\r\n");
+      out.write("\r\n");
+      out.write("</tr>\r\n");
+      out.write("<tr>\r\n");
+      out.write("<td><input type=\"text\" name=\"celular\"><br></td>\r\n");
+      out.write("\r\n");
+      out.write("</tr>\r\n");
+      out.write("</table>\r\n");
+      out.write("    <div class=\"boton\">\r\n");
+      out.write("        <INPUT class=\"submit\" TYPE=\"submit\" VALUE=\"Guardar\" onclick=\"abrir_dialog()\">\r\n");
+      out.write("        \r\n");
+      out.write("    </div>\r\n");
+      out.write("    \r\n");
+      out.write("      <div id=\"dialog\" title=\"\" style=\"display:none;\">\r\n");
+      out.write("          \r\n");
+      out.write("    <p>Curso Guardado</p>\r\n");
+      out.write(" \r\n");
+      out.write("</div>\r\n");
+      out.write("    \r\n");
+      out.write("</form>\r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

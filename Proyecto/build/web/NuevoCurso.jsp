@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.proyecto.conexion.Conexion"%>
+<%@page import="java.sql.ResultSet"%>
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,9 @@
       $( "#dialog" ).dialog({
           show: "blind",
           hide: "explode"
+          window.close();
       });
+ 
     };
     </script>
         <title>Pedir Un Curso</title>
@@ -38,49 +41,40 @@ height: 265px !important;
       <%
     Conexion c=new Conexion();
     String nombre = request.getParameter("Nombre"); 
-    String valor= request.getParameter("valor"); 
+   
     String correo = request.getParameter("correo"); 
-    String jornada = request.getParameter("jornada"); 
-    String curso= request.getParameter("curso"); 
-    String sede = request.getParameter("sede"); 
+ 
+    String celular= request.getParameter("celular"); 
+  
     
     
-    if (nombre!= null && valor!=null && correo!=null && jornada !=null && curso!=null && sede!=null) {
+    if (nombre!= null  && correo!=null  && celular!=null) {
             
-        
-    String qry="insert into cursonuevos(Nombre,Valor_Pagado,correo,jornada,Nombre_Curso,sede)values('"+nombre+"','"+valor+"','"+correo+"','"+jornada+"','"+curso+"','"+sede+"');";
-    c.sql.executeUpdate(qry);
-    out.print("");
+    ResultSet rs=c.PedirCursos(nombre, correo, celular);
+   
     }
         %>
 <FORM name="insert" METHOD=post action="NuevoCurso.jsp">
 <table>
 <tr>
-<td>Nombre</td>
-<td>Valor Que Pagaria</td>
+<td>Nombre Completo</td>
+<%--<td>Valor Que Pagaria</td>--%> 
 </tr>
 <tr>
 <td><input type="text" name="Nombre"><br></td>
-<td><input type="text" name="valor" placeholder="Valor Numerico" required <br></td>
+<%--<td><input type="text" name="valor" placeholder="Valor Numerico" required <br></td>--%>
 </tr>
 <td>Correo</td>
-<td>Jornada De Estudio</td>
 </tr>
 <tr>
 <td><input type="text" name="correo"placeholder="ejemplo@hotmail.com"><br></td>
-<td><input type="text" name="jornada"><br></td>
 </tr>
-<td>Nombre Curso</td>
-<td>Sede Para El Curso</td>
+<td>Celular</td>
+
 </tr>
 <tr>
-<td><input type="text" name="curso"><br></td>
-<td>
-   <select name="sede">
-   <option value="tagaste">Tagaste</option> 
-   <option value="suba">Suba</option> 
-</select>
-</td>
+<td><input type="text" name="celular"><br></td>
+
 </tr>
 </table>
     <div class="boton">
@@ -89,7 +83,10 @@ height: 265px !important;
     </div>
     
       <div id="dialog" title="" style="display:none;">
+          
     <p>Curso Guardado</p>
+
+  
  
 </div>
     

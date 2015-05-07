@@ -218,71 +218,62 @@
 		<i class="fa fa-2x fa-arrow-circle-up"></i>
 	</span>
     </div>
-    <footer>
+     <footer>
         <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4 col-sm-6 ListRedSocial">
-                <div class="TitleCurso Encabezado">
-                    <h4>Encuentranos</h4>
-                </div>
-            <div class="LinkSociales">
+        <div class="ListRedSocial">
+   
+          
+          <div class="LinkSociales">
               
-              <a class="btn btn-social-icon btn-lg btn-twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
+            
               <a class="btn btn-social-icon btn-lg btn-facebook">
                 <i class="fa fa-facebook"></i>
                 
               </a>
-              <a class="btn btn-social-icon btn-lg btn-google-plus">
-                <i class="fa fa-google-plus"></i>
+              <a class="btn btn-social-icon btn-lg btn-youtube">
+                <i class="fa fa-youtube"></i>
+                
+                  
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-instagram">
+                <i class="fa fa-instagram"></i>
                 
               </a>
           
+          
           </div>
+            <br>
+            
+            <div class="contacto">
+                <p>
+    Contacto: 4193200 Ext 1087. <br>
+
+    comercial@uniagustiniana.edu.co<br>
+
+    Dirección: Av Ciudad de Cali No 11b-95 Campus Tagaste / Sede Suba: Cll 147 No 89-39
+                </p>
+            </div>
+            
+                     <div id="info">
+            INSTITUCIÓN DE EDUCACIÓN SUPERIOR SUJETA A INSPECCIÓN Y VIGILANCIA POR EL M.E.N.
+
+                
+            </div>
 </div>
 
 
         
-        <div class="col-xs-12 col-md-4 col-sm-6 buttonCurso">
-           <div class="TitleCurso Encabezado">
-             <h4>Link de Interes</h4>
-           </div>
-          <div class="LinkInteres">
-              
-                <a class="btn btn-social-icon btn-lg btn-github">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a class="btn btn-social-icon btn-lg btn-linkedin">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-                <a class="btn btn-social-icon btn-lg btn-dropbox">
-                    <i class="fa fa-dropbox"></i>
-                </a>
-                <a class="btn btn-social-icon btn-lg btn-pinterest">
-                    <i class="fa fa-pinterest"></i>
-                </a>
+       
+   
+            
           
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4 col-sm-6 MapaSite">
-         <div class="TitleCurso Encabezado">
-             <h4>Nuestros Cursos</h4>
-           </div>
-          <div class="NuestrosCursos">
-              <ul>
-                  <li>Home</li>
-                  <li>Cursos</li>
-                  <li>Contactenos</li>
-                  <li>Enlaces Rapidos</li>
-                  <li>Pruebas</li>
-              </ul>
-          
-          </div>
-        </div>
+        
+     
         
     </div>
-            </div>
 </footer>
     </body>
 </html>

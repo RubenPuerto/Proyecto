@@ -71,6 +71,7 @@ background-color: #2B8954;
 .ListRedSocial{
   
   float: left;
+  text-align: center;
 }
 .Encabezado{
   background-color: #777777;
@@ -80,6 +81,9 @@ background-color: #2B8954;
 
 footer{
   padding-top: 10px;
+    background-color: rgb(248, 248, 248);
+  border-top: solid;
+  border-width: 1px;
  
   
 }
@@ -6637,3 +6641,19 @@ button.close {
     display: none !important;
   }
 }
+.contacto{
+      width: 1024px;
+  text-align: center;
+  border-bottom: solid;
+    }
+#info{
+      width: 1024px;
+      text-align: center;
+      font-weight: bold;
+ 
+    }
+    .LinkSociales a{
+       margin: 0 8px;
+    }
+    
+      

@@ -29,7 +29,7 @@ public class Conexion {
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="root";
+        this.pass="alexander05";
         
     
     }
@@ -108,6 +108,14 @@ public class Conexion {
     this.con();
 
     this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`programas` (`TituloCurso`, `DescripcionCurso`) VALUES ('"+nombre+"', '"+apellido+"');");
+    this.consulta.executeUpdate();
+    return this.datos;
+    }
+    
+     public ResultSet PedirCursos(String nombre,String Correo, String Celular) throws SQLException{
+    this.con();
+
+    this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`cursonuevos` (`Nombre`, `Correo`,`Celular`) VALUES ('"+nombre+"', '"+Correo+"','"+Celular+"');");
     this.consulta.executeUpdate();
     return this.datos;
     }
