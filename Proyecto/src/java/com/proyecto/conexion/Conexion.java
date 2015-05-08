@@ -22,14 +22,14 @@ public class Conexion {
     private PreparedStatement consulta;
     public ResultSet datos;
     private String server,user,bd,pass;
-   public Statement sql=null;
+   
     
     public Conexion(){
     
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="alexander05";
+        this.pass="root";
         
     
     }
@@ -39,7 +39,7 @@ public class Conexion {
         try {
              Class.forName("com.mysql.jdbc.Driver");
         this.con=DriverManager.getConnection("jdbc:mysql://"+this.server+"/"+this.bd,this.user,this.pass);
-        sql=con.createStatement();
+        
         
         
            

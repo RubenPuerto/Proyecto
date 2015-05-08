@@ -6,7 +6,7 @@ html {
   /*background-color: #EDEBEB;*/
 }
 body {
-  /*max-width: 1030px;*/
+  
   padding-top: 50px;
   margin: 0 auto;
   background-color: #EDEBEB;
@@ -70,7 +70,7 @@ background-color: #2B8954;
 
 .ListRedSocial{
   
-  float: left;
+  /* float: left; */
   text-align: center;
 }
 .Encabezado{
@@ -80,31 +80,47 @@ background-color: #2B8954;
 }
 
 footer{
-  padding-top: 10px;
-    background-color: rgb(248, 248, 248);
+  margin-top: 25px;
+  background-color: rgb(248, 248, 248);
   border-top: solid;
   border-width: 1px;
- 
-  
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 
+.contacto{
+    width: 100%;
+    text-align: center;
+    border-bottom: solid;
+    }
+#info{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+ 
+    }
+.LinkSociales a{
+    margin: 0 8px;
+}
+.LinkSociales{
+  margin-top: 25px;
+  padding-bottom: 10px;
+} 
+    
 div.buttonCurso{
   Padding-left: 10px;
   Padding-right: 10px;
 }
-.LinkSociales{
-  margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-}
-.LinkInteres{
-  margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-}
 
+.contentBanner{
+    width: 1030px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
 
 
 
@@ -6641,19 +6657,6 @@ button.close {
     display: none !important;
   }
 }
-.contacto{
-      width: 1024px;
-  text-align: center;
-  border-bottom: solid;
-    }
-#info{
-      width: 1024px;
-      text-align: center;
-      font-weight: bold;
- 
-    }
-    .LinkSociales a{
-       margin: 0 8px;
-    }
+
     
       
