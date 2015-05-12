@@ -15,7 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
     <title>Sistema de interacción ciudadana</title>
-
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href="css/acordion.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+    <link href="css/AcordioHome.css" rel="stylesheet" type="text/css"/>
+    
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
@@ -28,14 +35,8 @@
     <script type="text/javascript" src="js/jquery.fancybox.js"></script>
     <script src="js/Banner.js" type="text/javascript"></script>
     <script src="js/gototop.js" type="text/javascript"></script>
+    <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link href="css/acordion.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
-
     <script type="text/javascript">
 	$(document).ready(function() {
 
@@ -71,6 +72,7 @@
             box-shadow: 0 0 20px #222;
 	}
     </style>
+   
     
 
 </head>
@@ -226,7 +228,7 @@
                 </div>
 
 
-        <div id="grid" class="grid clearfix hidden-xs">
+        <div id="grid" class="grid clearfix viewImg">
                 
                 <%
                     Conexion c=new Conexion();
@@ -245,7 +247,11 @@
                         out.println("</a>");
                     }
                 %>
-        </div>  
+        </div> 
+        
+        
+        
+        
         
         </div>
         
@@ -376,6 +382,24 @@
 	<span class="scroll-top-inner">
 		<i class="fa fa-2x fa-arrow-circle-up"></i>
 	</span>
+    </div>
+        
+    <div id="accordian" class="visible-xs">
+     
+        
+            <ul>
+                <%
+                    c=new Conexion();
+                    rs=c.getCursos();
+                    while(rs.next()){
+                        out.println("<li>");
+                        out.println("<h3>"+rs.getString("TituloCurso")+"</h3>");
+                        out.println("<ul><li>"+rs.getString("DescripcionCurso")+"</li></ul>");
+                       // out.println("<ul><li><div class='ContentImg'><img src='"+rs.getString("ImagenCurso")+"' alt=''></div></li></ul>");
+                        out.println("</li>");
+                    }
+                %>
+            </ul>
     </div>
     
     <footer>

@@ -228,7 +228,7 @@ h1
 		overflow: hidden
 	 }
  
-		.hero .background .video {height: 100%}
+		.hero .background .video {height: 100%;/* margin-top: 50px; */}
  
 			.hero .background .video #video-cont {
 				width: 100% !important;

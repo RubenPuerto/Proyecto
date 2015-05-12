@@ -69,11 +69,12 @@ word-spacing: -2px;
 }
 
 .grid figcaption p {
-	padding: 0 20px;
-	color: #aaa;
-	font-weight: 300;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
+	//padding: 0px 20px;
+        color: #000;
+        font-weight: 300;
+        transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+        text-align: justify;
+        font-size: 13px;
 }
 
 .grid figcaption h2,
