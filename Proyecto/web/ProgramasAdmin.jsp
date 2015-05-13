@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
     <title>Sistema de interacción ciudadana</title>
-    <link href="css/AdminHome.css" rel="stylesheet" />
+    <link href="" rel="stylesheet" />
   
   
     
@@ -40,19 +40,13 @@
 				</div>
                               </nav>
         <div class="itemsPrincipales">
-        <h1>Administración Del Sitio</h1>
+        <h1>Administración Programas</h1>
        
-                                <a href="BannerAdmin.jsp" class="boton azul">Banner</a>
-                                <a href="ProgramasAdmin.jsp" class="boton azul">Programnas</a>
-                                <a href="TemasAdmin.jsp" class="boton azul">Temas</a>
+                                <a href="#" class="boton azul">Insertar Registro</a>
+                                <a href="#" class="boton azul">Eliminar Registro</a>
+                             
 				
         <hr>
-     
-       <h1>Generar Reportes</h1>
-       
-                                <a href="#" class="boton azul">Curso Nuevos</a>
-                                <a href="#" class="boton azul">Personas Inscritas</a>
-                              <hr>
 			
                               </div>
          </div>
