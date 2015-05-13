@@ -66,6 +66,7 @@ div.imgCurso{
 div.DetalleTema p{
 	text-align: justify;
         margin-left: 20px;
+        margin-right: 20px;
 }
 
 .TitleDetalle{
@@ -81,7 +82,7 @@ div.DetalleTema p{
 	padding-top:20px;
 }
 .ContentMail form{
-	width: 350px;
+	padding-right: 100px;
 }
 .ContentMail .correo{
 	padding-top:20px;
@@ -90,7 +91,28 @@ div.DetalleTema p{
 section {
   margin-top: 30px;
 }
-
+@media (max-width: 768px) {
+  .ContentMail form{
+    padding-right: 20px;
+    
+  }
+  .recibo {
+      margin-top: 10px;
+  }
+  .ContentMail .TitleCorreo {
+      padding-top: 0;
+  }
+  .hero .vote {
+      padding-top: 20px;
+  }
+  div.imgCurso {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    }
+  
+  
+}
 
 .hero {
 	position: relative;
@@ -99,7 +121,7 @@ section {
 }
 @media (max-width: 767px) {
 .hero {
-    height: 200px;
+    height: 260px;
 }
 h1
 {
@@ -119,8 +141,8 @@ h1
 
 @media (min-width: 768px)  {
 	.vote h1 {
-	color: #FFF;
-	text-shadow: 0 0 50px rgba(0,0,0,0.75);
+	color: #F8F8F8;
+	text-shadow: 0 0 50px rgba(0,0,0,1.75);
 	margin: 0 0 5px 0;
 	padding: 175px 0 0 0;
 	text-align: center;

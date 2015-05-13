@@ -93,9 +93,9 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav">
-					<li class="active"><a href="">Home</a></li>
+					<li class="active"><a href="">Inicio</a></li>
 					<li><a href="cursos.jsp">Cursos</a></li>
-                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">formulario</a></li>	
+                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Formulario</a></li>	
 					
 				  </ul>
 				
@@ -108,15 +108,6 @@
     
         <div id="slider1_container" style=" position: relative; margin: 0 auto;
         top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-            <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-            </div>
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <div>
@@ -128,6 +119,9 @@
                 </div>
                 <div>
                     <img u="image" src2="img/home/03.jpg" alt=""/>
+                </div>
+                <div>
+                    <img u="image" src2="img/home/04.jpg" alt=""/>
                 </div>
             </div>
 
@@ -248,27 +242,10 @@
                     }
                 %>
         </div> 
-        
-        
-        
-        
-        
         </div>
         
         <div id="slider1_container" style="display: none; position: relative; margin: 0 auto; width: 980px;
         height: 380px; overflow: hidden;">
-
-            <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-
-                background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
-
-                top: 0px; left: 0px;width: 100%;height:100%;">
-                </div>
-            </div>
 
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px;
@@ -394,14 +371,14 @@
                     while(rs.next()){
                         out.println("<li>");
                         out.println("<h3>"+rs.getString("TituloCurso")+"</h3>");
-                        out.println("<ul><li>"+rs.getString("DescripcionCurso")+"</li></ul>");
+                        out.println("<ul><li>"+rs.getString("DescripcionCurso")+"<a href='DetalleCursos.jsp?IdCurso="+rs.getString("IdCurso")+"'>Ver Mas</a></li></ul>");
                        // out.println("<ul><li><div class='ContentImg'><img src='"+rs.getString("ImagenCurso")+"' alt=''></div></li></ul>");
                         out.println("</li>");
                     }
                 %>
             </ul>
     </div>
-    
+
     <footer>
         <div class="container">
             <div class="ListRedSocial">
@@ -410,19 +387,19 @@
           <div class="LinkSociales">
               
             
-              <a class="btn btn-social-icon btn-lg btn-facebook">
+              <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com/uniagustiniana">
                 <i class="fa fa-facebook"></i>
                 
               </a>
-              <a class="btn btn-social-icon btn-lg btn-youtube">
+              <a class="btn btn-social-icon btn-lg btn-youtube" href="https://www.youtube.com/user/Uniagustiniana">
                 <i class="fa fa-youtube"></i>
                 
                   
               </a>
-              <a class="btn btn-social-icon btn-lg btn-twitter">
+              <a class="btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/UniagustOficial">
                 <i class="fa fa-twitter"></i>
               </a>
-              <a class="btn btn-social-icon btn-lg btn-instagram">
+              <a class="btn btn-social-icon btn-lg btn-instagram" href="https://instagram.com/">
                 <i class="fa fa-instagram"></i>
                 
               </a>

@@ -8,14 +8,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home Proyecto</title>
-     
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/url.js" type="text/javascript"></script>
-        
-        <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
-        <script src="js/playvid.js" type="text/javascript"></script>
-        <script src="js/GetDatos.js" type="text/javascript"></script>
         
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/cursos.css" media="screen" rel="stylesheet" type="text/css" />
@@ -25,6 +17,14 @@
         <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
         
         <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/url.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+        <script src="js/playvid.js" type="text/javascript"></script>
+        <script src="js/GetDatos.js" type="text/javascript"></script>
+        <script src="js/gototop.js" type="text/javascript"></script>
+        
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -63,33 +63,6 @@
 	
 	</style>
         
-        <script>
-
-    $(function(){
-
-            $(document).on( 'scroll', function(){
-
-                    if ($(window).scrollTop() > 100) {
-                            $('.scroll-top-wrapper').addClass('show');
-                    } else {
-                            $('.scroll-top-wrapper').removeClass('show');
-                    }
-            });
-
-            $('.scroll-top-wrapper').on('click', scrollToTop);
-    });
-
-    function scrollToTop() {
-            verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-            element = $('body');
-            offset = element.offset();
-            offsetTop = offset.top;
-            $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
-    }
-    </script>
-        
-    
-        
         
     </head>
     <body>
@@ -108,10 +81,9 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Otros</a></li>
-                            <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">formulario</a></li>	
+                            <li><a href="Home.jsp">Inicio</a></li>
+                            <li class="active"><a href="#">Cursos</a></li>
+                            <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Formulario</a></li>	
 			</ul>
 				
                     </div>
@@ -139,7 +111,6 @@
                 %>
             </div>
         </div>
-    
     <section>
         <div class="container">
             <div class="row">
@@ -159,11 +130,9 @@
                             %>
                     </select>
                 </div>
-                    <hr width=75%"/>
+                <hr width=75%"/>
             </div>
-            
             <div class="row Cargar">
-                        
             </div>
             <div class="row recibo">
                 <div class="col-md-12">
@@ -177,14 +146,10 @@
                         Contador de personas
                     </div>
                     <div class="codigoBarras">
-                        <img src="img/barcode.gif" alt=""/>
+                        <img src="img/Recursos/barcode.gif" alt=""/>
                     </div>
                 </div>
             </div>
-        
-                
-            
-            <!--<h1 class="infocurso">Si te gusta este curso dejanos tu correo <br> TE CONTACTAREMOS!</h1>-->
             <div class="row ContentMail">
                 <hr class="separador" width=75%"/>
                 <div class="col-md-6 TitleCorreo">
@@ -218,62 +183,36 @@
 		<i class="fa fa-2x fa-arrow-circle-up"></i>
 	</span>
     </div>
-     <footer>
+    <footer>
         <div class="container">
-        <div class="ListRedSocial">
-   
-          
-          <div class="LinkSociales">
-              
-            
-              <a class="btn btn-social-icon btn-lg btn-facebook">
-                <i class="fa fa-facebook"></i>
-                
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-youtube">
-                <i class="fa fa-youtube"></i>
-                
-                  
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-instagram">
-                <i class="fa fa-instagram"></i>
-                
-              </a>
-          
-          
-          </div>
-            <br>
-            
-            <div class="contacto">
-                <p>
-    Contacto: 4193200 Ext 1087. <br>
-
-    comercial@uniagustiniana.edu.co<br>
-
-    Dirección: Av Ciudad de Cali No 11b-95 Campus Tagaste / Sede Suba: Cll 147 No 89-39
-                </p>
+            <div class="ListRedSocial">
+                <div class="LinkSociales">
+                    <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com/uniagustiniana">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-social-icon btn-lg btn-youtube" href="https://www.youtube.com/user/Uniagustiniana">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a class="btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/UniagustOficial">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-social-icon btn-lg btn-instagram" href="https://instagram.com/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+                <br>
+                <div class="contacto">
+                    <p>
+                        Contacto: 4193200 Ext 1087. <br>
+                        comercial@uniagustiniana.edu.co<br>
+                        Dirección: Av Ciudad de Cali No 11b-95 Campus Tagaste / Sede Suba: Cll 147 No 89-39
+                    </p>
+                </div>
+                <div id="info">
+                    INSTITUCIÓN DE EDUCACIÓN SUPERIOR SUJETA A INSPECCIÓN Y VIGILANCIA POR EL M.E.N.
+                </div>
             </div>
-            
-                     <div id="info">
-            INSTITUCIÓN DE EDUCACIÓN SUPERIOR SUJETA A INSPECCIÓN Y VIGILANCIA POR EL M.E.N.
-
-                
-            </div>
-</div>
-
-
-        
-       
-   
-            
-          
-        
-     
-        
-    </div>
-</footer>
+        </div>
+    </footer>
     </body>
 </html>
