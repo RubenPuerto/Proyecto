@@ -72,10 +72,10 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </script>\r\n");
       out.write("    <script>\r\n");
       out.write("  function validarSiNumero(numero){\r\n");
-      out.write("    if (!/^([0-9])*$/.test(numero))\r\n");
+      out.write("    if (!/^([0-9])*$/.test(numero)){\r\n");
       out.write("      apprise(\"El valor \" + numero + \" no es un número\");\r\n");
-      out.write("     document.celular.value = \"\";\r\n");
-      out.write("  }\r\n");
+      out.write("   document.getElementById('cantidad').value = '';\r\n");
+      out.write("  }}\r\n");
       out.write("</script>\r\n");
       out.write("        <title>Pedir Un Curso</title>\r\n");
       out.write("    </head>\r\n");

@@ -113,9 +113,12 @@ $(document).ready(function(){
                   <ul class="nav navbar-nav">
 					<li ><a href="Home.jsp">Home</a></li>
 					<li class="active"><a href="cursos.jsp">Cursos</a></li>
-                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">formulario</a></li>	
-					
+                                        </ul>
+                                        <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	
 				  </ul>
+					
+				  
                 
                 </div><!--/.nav-collapse -->
               </div>

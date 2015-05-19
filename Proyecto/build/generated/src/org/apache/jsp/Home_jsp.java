@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import com.proyecto.Servlet.VerImagen;
 import java.sql.ResultSet;
 import com.proyecto.conexion.Conexion;
 
@@ -43,6 +44,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -136,11 +138,10 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t  <ul class=\"nav navbar-nav\">\r\n");
       out.write("\t\t\t\t\t<li class=\"active\"><a href=\"\">Inicio</a></li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"cursos.jsp\">Cursos</a></li>\r\n");
-      out.write("                                         </ul>\r\n");
-      out.write("                                    <ul class=\"nav navbar-nav navbar-right\">\r\n");
+      out.write("                                        </ul>\r\n");
+      out.write("                                        <ul class=\"nav navbar-nav navbar-right\">\r\n");
       out.write("                                        <li><a class=\"fancybox fancybox.iframe\" href=\"NuevoCurso.jsp\">Pedir Un Curso</a></li>\t\r\n");
-      out.write("\t\t\t\t\t</ul>\r\n");
-      out.write("\t\t\t\t \r\n");
+      out.write("\t\t\t\t  </ul>\r\n");
       out.write("\t\t\t\t\r\n");
       out.write("\t\t\t\t</div><!--/.nav-collapse -->\r\n");
       out.write("\t\t\t  </div>\r\n");
@@ -155,7 +156,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div u=\"slides\" style=\"cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;\">\r\n");
       out.write("                <div>\r\n");
       out.write("                    \r\n");
-      out.write("                    <img u=\"image\" src=\"img/home/01.jpg\" alt=\"\"/>\r\n");
+      out.write("                    <a href=\"www.google.com\"><img u=\"image\" src=\"img/home/01.jpg\" alt=\"\"/></a>\r\n");
       out.write("                </div>\r\n");
       out.write("                <div>\r\n");
       out.write("                    <img u=\"image\" src2=\"img/home/02.jpg\" alt=\"\"/>\r\n");
@@ -274,7 +275,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
                     while(rs.next()){
                         out.println("<a href='DetalleCursos.jsp?IdCurso="+rs.getString("IdCurso")+"' data-path-hover='m 180,34.57627 -180,0 L 0,0 180,0 z'>");
                         out.println("<figure>");
-                        out.println("<img src="+rs.getString("ImgCursosInicio")+" />");
+                        VerImagen ver=new VerImagen();
+                        
+                        out.println("<img src='VerImagen?IdCurso="+rs.getInt("IdCurso")+"'>");
                         out.println("<svg viewBox='170 0 1 330' preserveAspectRatio='none'><path d='M 180,160 0,218 0,0 180,0 z'/></svg>");
                         out.println("<figcaption>");
                         out.println("<h2>"+rs.getString("TituloCurso")+"</h2>");
@@ -287,6 +290,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
                 
       out.write("\r\n");
       out.write("        </div> \r\n");
+      out.write("        \r\n");
       out.write("        </div>\r\n");
       out.write("        \r\n");
       out.write("        <div id=\"slider1_container\" style=\"display: none; position: relative; margin: 0 auto; width: 980px;\r\n");

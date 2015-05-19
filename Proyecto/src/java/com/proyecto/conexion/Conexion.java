@@ -6,12 +6,13 @@
 
 package com.proyecto.conexion;
 
-import com.mysql.jdbc.PreparedStatement;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -32,7 +33,7 @@ public class Conexion {
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="root";
+        this.pass="alexander05";
         
     
     }
@@ -115,10 +116,10 @@ public class Conexion {
     return this.datos;
     }
     
-     public ResultSet PedirCursos(String nombre,String Correo, String Celular) throws SQLException{
+     public ResultSet PedirCursos(String nombre,String Correo, String Celular,String Curso,String Categoria) throws SQLException{
     this.con();
 
-    this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`cursonuevos` (`Nombre`, `Correo`,`Celular`) VALUES ('"+nombre+"', '"+Correo+"','"+Celular+"');");
+    this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`cursonuevos` (`Nombre`, `Correo`,`Celular`,`Curso`,`Categoria`) VALUES ('"+nombre+"', '"+Correo+"','"+Celular+"','"+Curso+"','"+Categoria+"');");
     this.consulta.executeUpdate();
     return this.datos;
     }
