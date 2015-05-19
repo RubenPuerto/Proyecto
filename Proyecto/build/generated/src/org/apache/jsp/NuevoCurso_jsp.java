@@ -54,7 +54,9 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/Formulario.css\" />\r\n");
+      out.write("            <link rel=\"stylesheet\" type=\"text/css\" href=\"css/apprise.css\" />\r\n");
       out.write("     <link rel=\"stylesheet\" href=\"http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css\" />\r\n");
+      out.write("     <script src=\"js/apprise.js\"></script>\r\n");
       out.write("    <script src=\"http://code.jquery.com/jquery-1.8.2.js\"></script>\r\n");
       out.write("    <script src=\"/resources/demos/external/jquery.bgiframe-2.1.2.js\"></script>\r\n");
       out.write("    <script src=\"http://code.jquery.com/ui/1.9.1/jquery-ui.js\"></script>\r\n");
@@ -63,11 +65,18 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      $( \"#dialog\" ).dialog({\r\n");
       out.write("          show: \"blind\",\r\n");
       out.write("          hide: \"explode\"\r\n");
-      out.write("           \r\n");
+      out.write("          window.close();\r\n");
       out.write("      });\r\n");
-      out.write("     window.location.replace(\"http://www.google.com\");\r\n");
+      out.write(" \r\n");
       out.write("    };\r\n");
       out.write("    </script>\r\n");
+      out.write("    <script>\r\n");
+      out.write("  function validarSiNumero(numero){\r\n");
+      out.write("    if (!/^([0-9])*$/.test(numero))\r\n");
+      out.write("      apprise(\"El valor \" + numero + \" no es un número\");\r\n");
+      out.write("     document.celular.value = \"\";\r\n");
+      out.write("  }\r\n");
+      out.write("</script>\r\n");
       out.write("        <title>Pedir Un Curso</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <style>\r\n");
@@ -87,12 +96,16 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
     String correo = request.getParameter("correo"); 
  
     String celular= request.getParameter("celular"); 
+    String curso= request.getParameter("Curso");
+     String categoria= request.getParameter("categoria"); 
+    
+    
   
     
     
     if (nombre!= null  && correo!=null  && celular!=null) {
             
-    ResultSet rs=c.PedirCursos(nombre, correo, celular);
+    ResultSet rs=c.PedirCursos(nombre, correo, celular,curso,categoria);
    
     }
         
@@ -101,24 +114,51 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<table>\r\n");
       out.write("<tr>\r\n");
       out.write("<td>Nombre Completo</td>\r\n");
+      out.write("<td>Correo</td>\r\n");
       out.write(" \r\n");
       out.write("</tr>\r\n");
       out.write("<tr>\r\n");
-      out.write("<td><input type=\"text\" name=\"Nombre\"><br></td>\r\n");
+      out.write("<td><input type=\"text\" name=\"Nombre\" required><br></td>\r\n");
+      out.write("<td><input type=\"email\" name=\"correo\"placeholder=\"ejemplo@hotmail.com\" required><br></td>\r\n");
       out.write("\r\n");
       out.write("</tr>\r\n");
-      out.write("<td>Correo</td>\r\n");
-      out.write("</tr>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<tr>\r\n");
-      out.write("<td><input type=\"text\" name=\"correo\"placeholder=\"ejemplo@hotmail.com\"><br></td>\r\n");
-      out.write("</tr>\r\n");
       out.write("<td>Celular</td>\r\n");
-      out.write("\r\n");
+      out.write("<td>Nombre Curso Solicitado</td>\r\n");
       out.write("</tr>\r\n");
+      out.write("\r\n");
       out.write("<tr>\r\n");
-      out.write("<td><input type=\"text\" name=\"celular\"><br></td>\r\n");
+      out.write("<td><input type=\"text\" name=\"celular\" required SIZE=10 id=\"cantidad\" onChange=\"validarSiNumero(this.value);\"><br></td>\r\n");
+      out.write("<td><input type=\"text\" name=\"Curso\" required><br></td>\r\n");
       out.write("\r\n");
       out.write("</tr>\r\n");
+      out.write("\r\n");
+      out.write("    <tr >\r\n");
+      out.write("    <td colspan=\"2\">Categoria</td>\r\n");
+      out.write("   </tr> \r\n");
+      out.write("   <tr>\r\n");
+      out.write("    <td colspan=\"2\">\r\n");
+      out.write("                 ");
+
+                                c=new Conexion();
+                                ResultSet rs=c.getCursos();
+                                out.println("<select name='categoria' required>");
+                                while (rs.next()){
+                                    out.println("<option value='"+rs.getString("TituloCurso")+"'>"+rs.getString("TituloCurso")+"</option>");
+               }
+
+      out.write(" \r\n");
+      out.write("</td>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("</tr>\r\n");
+      out.write("    \r\n");
+      out.write("\r\n");
+      out.write(" \r\n");
+      out.write("        \r\n");
+      out.write("      \r\n");
       out.write("</table>\r\n");
       out.write("    <div class=\"boton\">\r\n");
       out.write("        <INPUT class=\"submit\" TYPE=\"submit\" VALUE=\"Guardar\" onclick=\"abrir_dialog()\">\r\n");
@@ -128,6 +168,8 @@ public final class NuevoCurso_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <div id=\"dialog\" title=\"\" style=\"display:none;\">\r\n");
       out.write("          \r\n");
       out.write("    <p>Curso Guardado</p>\r\n");
+      out.write("\r\n");
+      out.write("  \r\n");
       out.write(" \r\n");
       out.write("</div>\r\n");
       out.write("    \r\n");

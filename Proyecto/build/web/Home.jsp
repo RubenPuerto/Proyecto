@@ -95,9 +95,11 @@
 				  <ul class="nav navbar-nav">
 					<li class="active"><a href="">Inicio</a></li>
 					<li><a href="cursos.jsp">Cursos</a></li>
-                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Formulario</a></li>	
-					
-				  </ul>
+                                         </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	
+					</ul>
+				 
 				
 				</div><!--/.nav-collapse -->
 			  </div>
