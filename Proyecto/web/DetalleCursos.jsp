@@ -103,7 +103,7 @@
                         out.println(" <h1>"+rs.getString("TituloCurso")+"<span></span></h1>");
                         out.println("<button class='play-btn'></button>");
                         out.println("</div>");
-                        out.println("<div class='background' style='background-image: url("+rs.getString("ImagenCurso")+");'>");
+                        out.println("<div class='background' style='background-image: url(VerImagenDetalle?IdCurso="+rs.getInt("IdCurso")+");'>");
                         out.println("<div class='video'>");
                         out.println("<span id='video-cont' data-video-id="+rs.getString("IdVideo")+" ></span>");
                         out.println("</div></div>");

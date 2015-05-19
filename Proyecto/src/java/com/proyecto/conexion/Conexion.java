@@ -6,10 +6,12 @@
 
 package com.proyecto.conexion;
 
-
+import com.mysql.jdbc.PreparedStatement;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -30,7 +32,7 @@ public class Conexion {
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="alexander05";
+        this.pass="root";
         
     
     }
@@ -113,14 +115,69 @@ public class Conexion {
     return this.datos;
     }
     
-     public ResultSet PedirCursos(String nombre,String Correo, String Celular,String Curso,String Categoria) throws SQLException{
+     public ResultSet PedirCursos(String nombre,String Correo, String Celular) throws SQLException{
     this.con();
 
-    this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`cursonuevos` (`Nombre`, `Correo`,`Celular`,`Curso`,`Categoria`) VALUES ('"+nombre+"', '"+Correo+"','"+Celular+"','"+Curso+"','"+Categoria+"');");
+    this.consulta=(PreparedStatement) this.con.prepareStatement("INSERT INTO `proyecto`.`cursonuevos` (`Nombre`, `Correo`,`Celular`) VALUES ('"+nombre+"', '"+Correo+"','"+Celular+"');");
     this.consulta.executeUpdate();
     return this.datos;
     }
-   
+     public byte[] obtenImagenProducto(int idProducto)  {
+        ResultSet rs = null;
+        byte[] buffer = null;
+        try {
+            this.con();
+            this.consulta=(PreparedStatement) this.con.prepareStatement("select ImgCursosInicio from programas where IdCurso='"+idProducto+"';");
+            rs = this.consulta.executeQuery();
+            System.out.println(rs);
+            while (rs.next()){
+                Blob bin = rs.getBlob("ImgCursosInicio");
+                if (bin != null) {
+                    InputStream inStream = bin.getBinaryStream();
+                    int size = (int) bin.length();
+                    buffer = new byte[size];
+                    int length = -1;
+                    int k = 0;
+                    try {
+                        inStream.read(buffer, 0, size);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            return null;
+        } 
+        return buffer;
+    }
+     public byte[] obtenImagenDetalle(int idProducto)  {
+        ResultSet rs = null;
+        byte[] buffer = null;
+        try {
+            this.con();
+            this.consulta=(PreparedStatement) this.con.prepareStatement("select ImagenCurso from programas where IdCurso='"+idProducto+"';");
+            rs = this.consulta.executeQuery();
+            System.out.println(rs);
+            while (rs.next()){
+                Blob bin = rs.getBlob("ImagenCurso");
+                if (bin != null) {
+                    InputStream inStream = bin.getBinaryStream();
+                    int size = (int) bin.length();
+                    buffer = new byte[size];
+                    int length = -1;
+                    int k = 0;
+                    try {
+                        inStream.read(buffer, 0, size);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            return null;
+        } 
+        return buffer;
+    }
     
     
 }

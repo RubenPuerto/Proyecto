@@ -4,6 +4,7 @@
     Author     : Ruben P
 --%>
 
+<%@page import="com.proyecto.Servlet.VerImagen"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="com.proyecto.conexion.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -95,11 +96,9 @@
 				  <ul class="nav navbar-nav">
 					<li class="active"><a href="">Inicio</a></li>
 					<li><a href="cursos.jsp">Cursos</a></li>
-                                         </ul>
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	
-					</ul>
-				 
+                                        <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Formulario</a></li>	
+					
+				  </ul>
 				
 				</div><!--/.nav-collapse -->
 			  </div>
@@ -114,7 +113,7 @@
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <div>
                     
-                    <img u="image" src="img/home/01.jpg" alt=""/>
+                    <a href="www.google.com"><img u="image" src="img/home/01.jpg" alt=""/></a>
                 </div>
                 <div>
                     <img u="image" src2="img/home/02.jpg" alt=""/>
@@ -232,7 +231,9 @@
                     while(rs.next()){
                         out.println("<a href='DetalleCursos.jsp?IdCurso="+rs.getString("IdCurso")+"' data-path-hover='m 180,34.57627 -180,0 L 0,0 180,0 z'>");
                         out.println("<figure>");
-                        out.println("<img src="+rs.getString("ImgCursosInicio")+" />");
+                        VerImagen ver=new VerImagen();
+                        
+                        out.println("<img src='VerImagen?IdCurso="+rs.getInt("IdCurso")+"'>");
                         out.println("<svg viewBox='170 0 1 330' preserveAspectRatio='none'><path d='M 180,160 0,218 0,0 180,0 z'/></svg>");
                         out.println("<figcaption>");
                         out.println("<h2>"+rs.getString("TituloCurso")+"</h2>");
@@ -244,6 +245,7 @@
                     }
                 %>
         </div> 
+        
         </div>
         
         <div id="slider1_container" style="display: none; position: relative; margin: 0 auto; width: 980px;

@@ -20,6 +20,14 @@
         <servlet-name>pruebas</servlet-name>
         <servlet-class>pruebas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerImagen</servlet-name>
+        <servlet-class>com.proyecto.Servlet.VerImagen</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerImagenDetalle</servlet-name>
+        <servlet-class>com.proyecto.Servlet.VerImagenDetalle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>llenarlista</servlet-name>
         <url-pattern>/llenarlista</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>pruebas</servlet-name>
         <url-pattern>/pruebas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerImagen</servlet-name>
+        <url-pattern>/VerImagen</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerImagenDetalle</servlet-name>
+        <url-pattern>/VerImagenDetalle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
