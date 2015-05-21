@@ -141,10 +141,10 @@
                         <img src="img/Temas/LogoUniagustiniana.png" alt=""/>
                     </div>
                     <div class="TitleRecibo">
-                        <h4>Tecnologia en Gastronomia</h4>
+                  
                     </div>
                     <div class="contador">
-                        Contador de personas
+                
                        
                     </div>
                     <div class="codigoBarras">
