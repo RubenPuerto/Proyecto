@@ -133,6 +133,7 @@
                 <hr width=75%"/>
             </div>
             <div class="row Cargar">
+                
             </div>
             <div class="row recibo">
                 <div class="col-md-12">
@@ -144,6 +145,7 @@
                     </div>
                     <div class="contador">
                         Contador de personas
+                       
                     </div>
                     <div class="codigoBarras">
                         <img src="img/Recursos/barcode.gif" alt=""/>

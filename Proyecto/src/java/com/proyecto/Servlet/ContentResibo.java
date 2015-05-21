@@ -10,54 +10,52 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author rubenp
+ * @author Rubenp
  */
-@WebServlet(name = "ActionServletDescripcion", urlPatterns = {"/ActionServletDescripcion"})
-public class ActionServletDescripcion extends HttpServlet {
-
-    Conexion c=new Conexion();
-
-
-    
+public class ContentResibo extends HttpServlet {
+Conexion c=new Conexion();
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String IdTema=request.getParameter("id");
-            
+            String IdTemas=request.getParameter("id");
+            out.println(IdTemas);
             try {
-                ResultSet rs=c.llenarDescripcion(IdTema);
+                try {ResultSet rs2=c.llenarDescripcion(IdTemas);
+                    while (rs2.next()) {
+                        out.println("titulo "+ rs2.getString("Titulo"));
+                        
+                    }
+                    
+                } catch (Exception e) {
+                }
+                ResultSet rs=c.ContadorInscritos(IdTemas);
                 
                 
                 while (rs.next()) {
                     
-                    out.println("<div class='col-md-6'>");
-                    out.println("<div class='TitleDetalle'>");
-                    out.println("<h4>Descripcion Curso</h4>");
-                    out.println("</div>");
-                    out.println("<div class='DetalleTema'>");
-                    out.println("<p>"+rs.getString("Descripcion")+"</p>");
-                    out.println("</div>");
-                    out.println("</div>");
-                    
-                    out.println("<div class='col-md-6'>");
-                    out.println("<div class='imgCurso'>");
-                    out.println("<img src="+rs.getString("ImgTema")+" alt=''/>");
-                    out.println("</div>");
-                    out.println("</div>");
+                    out.println(rs.getInt("personas"));
                     
                 }
                 
             } catch (Exception e) {
+                out.println("error");
             }
         }
     }
@@ -89,15 +87,6 @@ public class ActionServletDescripcion extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        
-        	
-		PrintWriter out = response.getWriter();
-
-		// Obtengo los datos de la peticion
-
-		// Compruebo que los campos del formulario tienen datos para añadir a la tabla
-          
     }
 
     /**

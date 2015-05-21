@@ -5,6 +5,11 @@ function LeerIdTema($valor) {
     }, function(responseText) {
     $('.Cargar').html(responseText);
     });
+    $.post('ContentResibo', {
+    id : $valor
+    }, function(responseText) {
+    $('.contador').html(responseText);
+    });
 }
 $(document).ready(function() {
     // Interceptamos el evento submit
