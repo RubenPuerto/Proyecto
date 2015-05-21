@@ -116,7 +116,7 @@ height: 265px !important;
       
 </table>
     <div class="boton">
-        <INPUT class="submit" TYPE="submit" VALUE="Guardar" onclick="abrir_dialog()">
+        <INPUT class="submit" TYPE="submit" VALUE="Enviar" onclick="abrir_dialog()">
         
     </div>
     

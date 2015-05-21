@@ -33,7 +33,7 @@ public class Conexion {
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="alexander05";
+        this.pass="root";
         
     
     }
@@ -151,7 +151,7 @@ public class Conexion {
         } 
         return buffer;
     }
-     public byte[] obtenImagenDetalle(int idProducto)  {
+    public byte[] obtenImagenDetalle(int idProducto)  {
         ResultSet rs = null;
         byte[] buffer = null;
         try {
@@ -161,6 +161,56 @@ public class Conexion {
             System.out.println(rs);
             while (rs.next()){
                 Blob bin = rs.getBlob("ImagenCurso");
+                if (bin != null) {
+                    InputStream inStream = bin.getBinaryStream();
+                    int size = (int) bin.length();
+                    buffer = new byte[size];
+                    int length = -1;
+                    int k = 0;
+                    try {
+                        inStream.read(buffer, 0, size);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            return null;
+        } 
+        return buffer;
+    }
+    public ResultSet GetUser(String user, String Password) throws SQLException 
+    {
+    this.con();
+    this.consulta=(PreparedStatement) this.con.prepareStatement("select * from admin where User='"+user+"' and Password='"+Password+"'");
+    this.datos=this.consulta.executeQuery();
+    return this.datos;
+    }
+    public ResultSet EliminarItem(String Id) throws SQLException{
+    this.con();
+
+    this.consulta=(PreparedStatement) this.con.prepareStatement("DELETE FROM `proyecto`.`programas` WHERE `IdCurso`='"+Id+"';");
+    this.consulta.executeUpdate();
+    return this.datos;
+    }
+    public ResultSet getBanner() throws SQLException 
+    {
+    this.con();
+
+    this.consulta=(PreparedStatement) this.con.prepareStatement("select * from banner");
+    this.datos=this.consulta.executeQuery();
+    return this.datos;
+    }
+    public byte[] obtenImagenBanner()  {
+        ResultSet rs = null;
+        byte[] buffer = null;
+        try {
+            this.con();
+            this.consulta=(PreparedStatement) this.con.prepareStatement("select Img from Banner;");
+            rs = this.consulta.executeQuery();
+            System.out.println(rs);
+            while (rs.next()){
+                Blob bin = rs.getBlob("Img");
                 if (bin != null) {
                     InputStream inStream = bin.getBinaryStream();
                     int size = (int) bin.length();

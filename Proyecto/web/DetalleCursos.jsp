@@ -83,8 +83,10 @@
                         <ul class="nav navbar-nav">
                             <li><a href="Home.jsp">Inicio</a></li>
                             <li class="active"><a href="#">Cursos</a></li>
-                            <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Formulario</a></li>	
 			</ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	
+                        </ul>
 				
                     </div>
                 </div>
@@ -120,8 +122,6 @@
                             <%
                                 IDCurso = request.getParameter("IdCurso");
                                 int value=0;
-
-
                                 rs=c.llenarTema(IDCurso);
                                 while (rs.next()){
                                 value=rs.getInt("IdTemas");
@@ -159,7 +159,7 @@
                     <form id="form" action="ActionServletGuardar" method="post" name="fo3">
                         <input type="email" id="mail" class="form-control" name="correo" placeholder="Enter email"><br>
                         <div class="boton">
-                            <INPUT class="submit" TYPE="submit" VALUE="Guardar" onclick="abrir_dialog()">
+                            <INPUT class="submit" TYPE="submit" VALUE="Enviar" onclick="abrir_dialog()">
                         </div>
                         
                     </form>

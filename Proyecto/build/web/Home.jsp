@@ -96,8 +96,8 @@
 				  <ul class="nav navbar-nav">
 					<li class="active"><a href="">Inicio</a></li>
 					<li><a href="cursos.jsp">Cursos</a></li>
-                                        </ul>
-                                        <ul class="nav navbar-nav navbar-right">
+                                  </ul>
+                                  <ul class="nav navbar-nav navbar-right">
                                         <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	
 				  </ul>
 				
@@ -112,19 +112,16 @@
         top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
-                <div>
-                    
-                    <a href="www.google.com"><img u="image" src="img/home/01.jpg" alt=""/></a>
-                </div>
-                <div>
-                    <img u="image" src2="img/home/02.jpg" alt=""/>
-                </div>
-                <div>
-                    <img u="image" src2="img/home/03.jpg" alt=""/>
-                </div>
-                <div>
-                    <img u="image" src2="img/home/04.jpg" alt=""/>
-                </div>
+                <%
+                Conexion c=new Conexion();
+                ResultSet rs=c.getBanner();
+                while(rs.next()){
+                    out.println("<div>");
+                    out.println("<a href='"+rs.getString("Url")+"'><img u='image' src='VerImgBanner' alt=''> </a>");
+                    out.println("</div>");
+                }
+                %>
+                
             </div>
 
             <!-- Bullet Navigator Skin Begin -->
@@ -227,8 +224,8 @@
         <div id="grid" class="grid clearfix viewImg">
                 
                 <%
-                    Conexion c=new Conexion();
-                    ResultSet rs=c.getCursos();
+                    c=new Conexion();
+                    rs=c.getCursos();
                     while(rs.next()){
                         out.println("<a href='DetalleCursos.jsp?IdCurso="+rs.getString("IdCurso")+"' data-path-hover='m 180,34.57627 -180,0 L 0,0 180,0 z'>");
                         out.println("<figure>");
@@ -255,18 +252,17 @@
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px;
             overflow: hidden;">
-                <div>
-                    <img u="image" src2="img/home/01.jpg" />
-                </div>
-                <div>
-                    <img u="image" src2="img/home/02.jpg" />
-                </div>
-                <div>
-                    <img u="image" src2="img/home/03.jpg" />
-                </div>
-                <div>
-                    <img u="image" src2="img/home/04.jpg" />
-                </div>
+                
+                <%
+                c=new Conexion();
+                rs=c.getBanner();
+                while(rs.next()){
+                    out.println("<div>");
+                    out.println("<img u='image' src2='VerImgBanner' />");
+                    out.println("</div>");
+                }
+                %>
+                
             </div>
             <!-- Bullet Navigator Skin Begin -->
             <style>
