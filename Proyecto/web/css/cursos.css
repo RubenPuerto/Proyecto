@@ -36,6 +36,28 @@
 	margin-top: 10%;
 	margin-right: 2%;
 }
+.contador {
+  width: 85%;
+  float: right;
+  padding-top: 20px;
+}
+h4#contador {
+  margin-top: 125px;
+  position: absolute;
+}
+h4#conta {
+  margin-top: 135px;
+  position: absolute;
+
+}
+h4#precio {
+  position: absolute;
+  margin-top: 40px;
+  font-size: 56px;
+  width: 800px;
+  text-align: center;
+}
+h4,
 
 
  

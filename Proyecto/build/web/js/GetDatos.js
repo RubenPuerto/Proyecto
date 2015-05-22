@@ -8,7 +8,7 @@ function LeerIdTema($valor) {
     $.post('ContentResibo', {
     id : $valor
     }, function(responseText) {
-    $('.contador').html(responseText);
+    $('.Items').html(responseText);
     });
 }
 $(document).ready(function() {

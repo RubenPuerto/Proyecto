@@ -140,13 +140,10 @@
                     <div class="reciboImg">
                         <img src="img/Temas/LogoUniagustiniana.png" alt=""/>
                     </div>
-                    <div class="TitleRecibo">
+                    <div class="Items">
                   
                     </div>
-                    <div class="contador">
                 
-                       
-                    </div>
                     <div class="codigoBarras">
                         <img src="img/Recursos/barcode.gif" alt=""/>
                     </div>

@@ -35,22 +35,27 @@ Conexion c=new Conexion();
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String IdTemas=request.getParameter("id");
-            out.println(IdTemas);
+            //out.println(IdTemas);
             try {
                 try {ResultSet rs2=c.llenarDescripcion(IdTemas);
                     while (rs2.next()) {
-                        out.println("titulo "+ rs2.getString("Titulo"));
-                        
+                        out.println("<div class='TitleRecibo'>");
+                        out.println("<h4>"+ rs2.getString("Titulo")+"</h4>");
+                        out.println("<h4 id='precio'> $ "+ rs2.getString("Costo")+"</h4>");
+                        out.println("</div");
                     }
                     
                 } catch (Exception e) {
                 }
                 ResultSet rs=c.ContadorInscritos(IdTemas);
-                
-                
                 while (rs.next()) {
+                    out.println("<div></div>");
+                    out.println("<div class='contador'>");
+                    out.println("<h4 id='contador'>Este Curso le ha Interesa a "+ rs.getString("personas")+" Personas</h4><br>");
+                    out.println("<h4 id='conta'>APUNTATE TU TAMBIEN</>");
+                    out.println("</div");
                     
-                    out.println(rs.getInt("personas"));
+                     
                     
                 }
                 

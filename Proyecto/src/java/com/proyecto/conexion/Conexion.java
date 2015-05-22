@@ -33,7 +33,7 @@ public class Conexion {
      this.server="localhost";
         this.bd="proyecto";
         this.user="root";
-        this.pass="root";
+        this.pass="alexander05";
         
     
     }
@@ -80,7 +80,7 @@ public class Conexion {
     {
     this.con();
 
-    this.consulta=(PreparedStatement) this.con.prepareStatement("select Titulo,Descripcion,ImgTema from temas where IdTemas="+IdTemas+"");
+    this.consulta=(PreparedStatement) this.con.prepareStatement("select Costo,Titulo,Descripcion,ImgTema from temas where IdTemas="+IdTemas+"");
     this.datos=this.consulta.executeQuery();
     return this.datos;
     }
