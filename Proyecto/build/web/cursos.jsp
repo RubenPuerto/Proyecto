@@ -159,7 +159,7 @@ $(document).ready(function(){
                                     out.println("<li>");
                                     out.println("<figure>");
                                     //out.println("<img src ="+rs2.getObject("ImgTema")+">");
-                                    out.println("<img src='"+rs2.getString("ImgTema")+"' alt='img04'>");
+                                    out.println("<img src='VerImagenTema?idtema="+rs2.getInt("IdTemas")+"' alt='img04'>");
                                     out.println("<figcaption>");
                                     out.println("<h3> "+rs2.getObject("Titulo")+"</h3>");
                                    // out.println("<p>"+rs2.getObject("Descripcion")+"</h3>");

@@ -82,7 +82,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="Home.jsp">Inicio</a></li>
-                            <li class="active"><a href="#">Cursos</a></li>
+                            <li class="active"><a href="cursos.jsp">Cursos</a></li>
 			</ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="fancybox fancybox.iframe" href="NuevoCurso.jsp">Pedir Un Curso</a></li>	

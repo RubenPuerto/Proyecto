@@ -38,7 +38,7 @@ public class VerImagen extends HttpServlet {
         String idProducto = request.getParameter("IdCurso");
         int idProd = Integer.parseInt(idProducto);
         byte[] imag = p.obtenImagenProducto(idProd);
-        System.out.println("ruben puerto lagash");
+        
         if (imag != null) {
             ServletOutputStream out2 = response.getOutputStream();
             out2.write(imag);

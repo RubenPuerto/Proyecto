@@ -36,6 +36,10 @@
         <servlet-name>ContentResibo</servlet-name>
         <servlet-class>com.proyecto.Servlet.ContentResibo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerImagenTema</servlet-name>
+        <servlet-class>com.proyecto.Servlet.VerImagenTema</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>llenarlista</servlet-name>
         <url-pattern>/llenarlista</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>ContentResibo</servlet-name>
         <url-pattern>/ContentResibo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerImagenTema</servlet-name>
+        <url-pattern>/VerImagenTema</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

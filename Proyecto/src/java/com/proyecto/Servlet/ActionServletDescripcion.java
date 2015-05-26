@@ -51,7 +51,9 @@ public class ActionServletDescripcion extends HttpServlet {
                     
                     out.println("<div class='col-md-6'>");
                     out.println("<div class='imgCurso'>");
-                    out.println("<img src="+rs.getString("ImgTema")+" alt=''/>");
+//                    out.println(rs.getInt("IdTemas"));
+                    out.println("<img src='VerImagenTema?idtema="+rs.getInt("IdTemas")+"' alt=''/>");
+//                    out.println("<img src='VerImagenTema' alt=''/>");
                     out.println("</div>");
                     out.println("</div>");
                     
