@@ -93,10 +93,10 @@ public class Conexion {
     this.datos=this.consulta.executeQuery();
     return this.datos;
     }
-    public ResultSet GuardarPersonas(String IdCurso,String IdTemas,String Correo) throws SQLException{
+    public ResultSet GuardarPersonas(String IdCurso,String IdTemas,String Correo, String Nombre, String Celular) throws SQLException{
     this.con();
-
-    this.consulta=(PreparedStatement) this.con.prepareStatement("insert into newpeople(IdCurso,IdTema,Correo)values("+IdCurso+","+IdTemas+",'"+Correo+"');");
+    
+    this.consulta=(PreparedStatement) this.con.prepareStatement("insert into newpeople(IdCurso,IdTema,Correo,Celular,Nombre)values("+IdCurso+","+IdTemas+",'"+Correo+"','"+Celular+"','"+Nombre+"');");
     this.consulta.executeUpdate();
     return this.datos;
     }
@@ -201,12 +201,12 @@ public class Conexion {
     this.datos=this.consulta.executeQuery();
     return this.datos;
     }
-    public byte[] obtenImagenBanner()  {
+    public byte[] obtenImagenBanner(String IdBanner)  {
         ResultSet rs = null;
         byte[] buffer = null;
         try {
             this.con();
-            this.consulta=(PreparedStatement) this.con.prepareStatement("select Img from Banner;");
+            this.consulta=(PreparedStatement) this.con.prepareStatement("select Img from Banner where Id="+IdBanner+";");
             rs = this.consulta.executeQuery();
             System.out.println(rs);
             while (rs.next()){

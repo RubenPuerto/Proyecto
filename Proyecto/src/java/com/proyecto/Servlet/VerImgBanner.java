@@ -34,10 +34,11 @@ public class VerImgBanner extends HttpServlet {
             throws ServletException, IOException {
         HttpSession sesion=request.getSession();
         response.setContentType("image/jpeg");
-        Conexion p = new Conexion();
         
-        byte[] imag = p.obtenImagenBanner(); 
-        System.out.println("ruben puerto lagash");
+        Conexion p = new Conexion();
+        String IdBanner = request.getParameter("idbanner");
+        byte[] imag = p.obtenImagenBanner(IdBanner); 
+        
         if (imag != null) {
             ServletOutputStream out2 = response.getOutputStream();
             out2.write(imag);

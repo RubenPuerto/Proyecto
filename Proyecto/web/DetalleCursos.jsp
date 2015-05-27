@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/Formulario.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
         <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/apprise.css" />
         
         <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -24,7 +25,10 @@
         <script src="js/playvid.js" type="text/javascript"></script>
         <script src="js/GetDatos.js" type="text/javascript"></script>
         <script src="js/gototop.js" type="text/javascript"></script>
+        <script src="js/apprise.js"></script>
         
+       
+            </script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -63,7 +67,14 @@
 	
 	</style>
         
-        
+        <script>
+            function validarSiNumero(numero){
+    if (!/^([0-9])*$/.test(numero)){
+      apprise("El valor " + numero + " no es un número");
+   document.getElementById('Celular').value = '';
+  }}
+            
+        </script>
     </head>
     <body>
         <!-- NAVBAR-->
@@ -152,27 +163,20 @@
             <div class="row ContentMail">
                 <hr class="separador" width=75%"/>
                 <div class="col-md-6 TitleCorreo">
-                    <h4>Si te Gusta este Curso Dejanos Tu Correo</h4>
+                    <h4>Si te Gusta este Curso Dejanos Tus Datos</h4>
                 </div>
                 <div class="col-md-6 correo">
-                    <form id="form" action="ActionServletGuardar" method="post" name="fo3">
-                        <input type="email" id="mail" class="form-control" name="correo" placeholder="Enter email"><br>
+                    <form id="form" method="post" name="fo3">
+                        <input type="text" id="Nombre" class="form-control" placeholder="Nombre" required><br>
+                        <input type="text" id="Celular" class="form-control" placeholder="Celular"  onChange="validarSiNumero(this.value);"><br>
+                        <input type="email" id="mail" class="form-control" name="correo" placeholder="Enter email" required><br>
                         <div class="boton">
-                            <INPUT class="submit" TYPE="submit" VALUE="Enviar" onclick="abrir_dialog()">
+                            <INPUT class="submit" TYPE="submit" VALUE="Enviar" onclick="abrirdialog();">
                         </div>
                         
                     </form>
-                    <script>
-                        function abrir_dialog() {
-                            $( "#dialog" ).dialog({
-                                show: "blind",
-                                hide: "explode"
-                            });
-                        };
-                    </script>
-                    <div id="dialog" title="" style="display:none;">
-                            <p>Curso Guardado</p>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </div>

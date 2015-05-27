@@ -41,12 +41,16 @@ public class ActionServletGuardar extends HttpServlet {
          String mail = String.valueOf(request.getParameter("mail"));
          String IdTema = String.valueOf(request.getParameter("IdItem"));
          String IdCurso=String.valueOf(request.getParameter("IdCurso"));
+         String Nombre=String.valueOf(request.getParameter("Nombre"));
+         String Celular=String.valueOf(request.getParameter("Celular"));
+            
+
                   
             try {
-                ResultSet rs=c.GuardarPersonas(IdCurso, IdTema, mail);
-                out.println("<div>se guardo el correo</div>");
+                ResultSet rs=c.GuardarPersonas(IdCurso, IdTema, mail, Nombre, Celular);
+                
             } catch (Exception e) {
-                out.println("<div>No se guardo nada</div>");
+                
             }
          
         }

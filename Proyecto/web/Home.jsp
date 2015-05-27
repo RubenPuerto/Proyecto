@@ -116,8 +116,10 @@
                 Conexion c=new Conexion();
                 ResultSet rs=c.getBanner();
                 while(rs.next()){
+                    int idBanner=rs.getInt("Id");
+                    
                     out.println("<div>");
-                    out.println("<a href='"+rs.getString("Url")+"'><img u='image' src='VerImgBanner' alt=''> </a>");
+                    out.println("<a href='"+rs.getString("Url")+"'><img u='image' src='VerImgBanner?idbanner="+idBanner+"' alt=''> </a>");
                     out.println("</div>");
                 }
                 %>
@@ -217,7 +219,7 @@
     
     <div class="container">
                 <div class="title">
-                    <h1>Que Quieres Estudiar</h1>
+                    <h1>¿Que Quieres Estudiar?</h1>
                 </div>
 
 

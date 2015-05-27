@@ -1,94 +1,23 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>AJAX JSP Servelts</title>
-<script src="http://code.jquery.com/jquery-latest.js">
-    
-
-</script>
-<script src="jquery-1.11.2.min.js" type="text/javascript"></script>
-
-
-<script>
-	$(document).ready(function() {
-		$('#submit').click(function(event) {
-			var nombreVar = $('#nombre').val();
-			var apellidoVar = $('#apellido').val();
-			var edadVar = $('#edad').val();
-			// Si en vez de por post lo queremos hacer por get, cambiamos el $.post por $.get
-			$.post('ActionServlet', {
-				nombre : nombreVar,
-				apellido: apellidoVar,
-				edad: edadVar
-			}, function(responseText) {
-				$('#tabla').html(responseText);
-			});
-		});
-	});
-</script>
-		<script>
-	function LeerIdCurso($valor) {
-			
-			
-			// Si en vez de por post lo queremos hacer por get, cambiamos el $.post por $.get
-			$.post('ActionServletDetalle', {
-				id : $valor
-                                
-			}, function(responseText) {
-				$('#tabla2').html(responseText);
-			});
-                        
-		
-	}
-</script>
-<script>
-	function LeerIdTema($valor) {
-			
-			
-			// Si en vez de por post lo queremos hacer por get, cambiamos el $.post por $.get
-			$.post('ActionServletDetalleTemas', {
-				id : $valor
-                                
-			}, function(responseText) {
-				$('#DetalleTema').html(responseText);
-			});
-                        
-		
-	}
-</script>
-
+  <meta charset="utf-8">
+  <title>jQuery UI Dialog - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog();
+  });
+  </script>
 </head>
 <body>
-	<h2>Ejemplo de AJAX con JSP y Servelts</h2>
-	<form id="form1">
-		Nombre:<input type="text" id="nombre" /> <br>
-		Apellido: <input type="text" id="apellido" /> <br>
-		Edad: <input type="text" id="edad" /> <br>
-		<input type="button" id="submit" value="Añadir" /> 
-	</form>
-	<br>
-	<!-- 	En este div metemos el contenido de la tabla con AJAX -->
-	
-        
-        
-        <select name="paises" id="tabla" class="form-control" onchange="LeerIdCurso(value);" >
-            <option>Pruebas</option>
-            
-        </select>
-      
-        
-        <select name="ruben" id="tabla2" class="form-control" onchange="LeerIdTema(value);" >
-            
-            
-        </select>
-        <div id="DetalleTema">
-            
-        </div>
-    </body>
+ 
+<div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+ 
+ 
+</body>
 </html>
